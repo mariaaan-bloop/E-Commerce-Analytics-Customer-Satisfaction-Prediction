@@ -1,5 +1,5 @@
 # Big Data Architecture for E-Commerce Analytics & Customer Satisfaction Prediction
-### (Brazilian Olist Dataset) — COMP6579001 Big Data Processing
+### (Brazilian Olist Dataset)
 
 ## 📌 Overview
 
@@ -37,7 +37,7 @@ Machine Learning → CatBoost & Random Forest
 Visualization Layer → Power BI Dashboard
 ```
 
-**Kenapa Hadoop (HDFS)?**
+**Alasan Menggunakan Hadoop (HDFS)**
 - **Horizontal scalability** — bisa menambah node komoditas alih-alih upgrade satu server besar
 - **Fault-tolerant** — data direplikasi otomatis ke banyak server
 - **High throughput untuk batch processing** — cocok untuk data historis berskala besar seperti Olist
@@ -103,6 +103,4 @@ BDP_Group 3/
 - Migrasi ke **Multi-Node Hadoop Cluster** untuk scalability dan fault tolerance yang lebih baik
 - Eksplorasi model lanjutan (SVM, XGBoost tuning) untuk mengatasi class imbalance
 
----
 
-*Project ini merupakan bagian dari mata kuliah Big Data Processing (COMP6579001).*
