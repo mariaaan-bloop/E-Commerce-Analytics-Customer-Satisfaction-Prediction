@@ -1,5 +1,4 @@
 # Big Data Architecture for E-Commerce Analytics & Customer Satisfaction Prediction
-### (Brazilian Olist Dataset)
 
 ## 📌 Overview
 
