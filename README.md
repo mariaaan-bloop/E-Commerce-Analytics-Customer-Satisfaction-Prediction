@@ -82,7 +82,6 @@ Dashboard Power BI (`dasboard.pbix`) terdiri dari 3 halaman:
 
 ```
 BDP_Group 3/
-├── DATASET/                        # Dataset mentah (CSV)
 ├── DATA PROCESSING/
 │   ├── Code Data Processing.ipynb  # ETL dengan PySpark + HDFS
 │   └── PROCESSING OUTPUT/
@@ -101,5 +100,8 @@ BDP_Group 3/
 - Integrasi **real-time streaming** dengan Apache Kafka + Spark Structured Streaming
 - Migrasi ke **Multi-Node Hadoop Cluster** untuk scalability dan fault tolerance yang lebih baik
 - Eksplorasi model lanjutan (SVM, XGBoost tuning) untuk mengatasi class imbalance
+
+## Dataset Source
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 
