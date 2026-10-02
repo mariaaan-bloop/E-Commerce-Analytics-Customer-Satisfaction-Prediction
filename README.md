@@ -1,12 +1,12 @@
 # Big Data Architecture for E-Commerce Analytics & Customer Satisfaction Prediction
 
-## 📌 Overview
+## Overview
 
 Project ini membangun sebuah **arsitektur Big Data end-to-end** untuk mengolah data transaksi e-commerce berskala besar dari **Brazilian E-Commerce Public Dataset by Olist**, lalu menghasilkan **model machine learning prediksi kepuasan pelanggan (customer satisfaction)** serta **dashboard analitik interaktif**.
 
 Fokus utama project ini adalah penerapan **teknologi Big Data**, bukan sekadar analisis data biasa — dataset diproses menggunakan **Hadoop Distributed File System (HDFS)** sebagai storage layer dan **Apache Spark (PySpark)** sebagai processing engine, dijalankan di atas **Cloudera VM environment**.
 
-## 🗂️ Big Data Characteristics (5V)
+## Big Data Characteristics (5V)
 
 Dataset Olist memenuhi kelima karakteristik Big Data yang menjadi alasan utama penggunaan Hadoop ecosystem:
 
@@ -18,7 +18,7 @@ Dataset Olist memenuhi kelima karakteristik Big Data yang menjadi alasan utama p
 | **Veracity** | Banyak missing value, duplikasi, outlier finansial, dan anomali waktu yang perlu divalidasi |
 | **Value** | Insight untuk strategi logistik, retensi pelanggan, dan performa seller |
 
-## 🏗️ Arsitektur Big Data
+##  Arsitektur Big Data
 
 Project ini menggunakan **layered batch architecture** yang berpusat pada ekosistem Hadoop:
 
@@ -44,7 +44,7 @@ Visualization Layer → Power BI Dashboard
 
 Apache Spark dipilih sebagai processing engine karena berjalan **di atas Hadoop** dan mampu melakukan distributed processing terhadap data yang tersimpan di HDFS, jauh lebih cepat dibanding pemrosesan sekuensial pada RDBMS tradisional.
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **Storage:** Hadoop Distributed File System (HDFS) — Cloudera VM
 - **Processing:** Apache Spark (PySpark)
@@ -52,7 +52,7 @@ Apache Spark dipilih sebagai processing engine karena berjalan **di atas Hadoop*
 - **Visualization:** Power BI
 - **File Format:** Parquet (output akhir untuk efisiensi storage & ML)
 
-## 🔄 Alur Data Processing
+## Alur Data Processing
 
 1. **Data Load** — 9 dataset mentah (orders, customers, order items, reviews, payments, products, geolocation, sellers, product category translation) dibaca dari HDFS menggunakan PySpark
 2. **Data Cleaning** — filtering status order, handling missing value (drop & imputasi), penghapusan duplikasi, serta anonymization teks review (masking nama samaran)
@@ -62,7 +62,7 @@ Apache Spark dipilih sebagai processing engine karena berjalan **di atas Hadoop*
 6. **Data Integration** — join seluruh tabel menjadi satu master table
 7. **Load ke HDFS** — hasil akhir disimpan kembali ke HDFS dalam format Parquet
 
-## 🤖 Machine Learning
+## Machine Learning
 
 Target prediksi: **`is_satisfied`** (klasifikasi biner — puas / tidak puas, berdasarkan `review_score`)
 
@@ -71,14 +71,14 @@ Target prediksi: **`is_satisfied`** (klasifikasi biner — puas / tidak puas, be
 - Evaluasi menggunakan **10-Fold Stratified Cross Validation**
 - Insight utama: **keterlambatan pengiriman** dan **durasi pengiriman** adalah faktor paling berpengaruh terhadap kepuasan pelanggan — lebih dominan dibanding harga atau metode pembayaran
 
-## 📊 Dashboard
+## Dashboard
 
 Dashboard Power BI (`dasboard.pbix`) terdiri dari 3 halaman:
 1. Executive Summary — KPI kepuasan pelanggan, rata-rata waktu pengiriman, total order
 2. Delivery & Late Delivery Analysis — hubungan keterlambatan dengan kepuasan pelanggan
 3. Regional & Order Complexity Analysis — peta sebaran kepuasan per wilayah & pengaruh jumlah item per order
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 ```
 BDP_Group 3/
@@ -95,7 +95,7 @@ BDP_Group 3/
 └── Presentation.pdf
 ```
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Integrasi **real-time streaming** dengan Apache Kafka + Spark Structured Streaming
 - Migrasi ke **Multi-Node Hadoop Cluster** untuk scalability dan fault tolerance yang lebih baik
